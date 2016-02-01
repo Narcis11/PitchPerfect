@@ -10,6 +10,7 @@ import UIKit
 
 class PlaySoundsViewController: UIViewController {
 
+    @IBOutlet weak var slowButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +23,9 @@ class PlaySoundsViewController: UIViewController {
     }
     
 
+    @IBAction func playSlowAudio(sender: AnyObject) {
+        print("in playSlowAudio")
+    }
     /*
     // MARK: - Navigation
 
