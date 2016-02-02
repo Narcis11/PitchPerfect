@@ -16,6 +16,7 @@
 		886FD3601C5FD7AE00256F25 /* PitchPerfectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FD35F1C5FD7AE00256F25 /* PitchPerfectUITests.swift */; };
 		886FD36E1C5FDFF400256F25 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FD36D1C5FDFF400256F25 /* PlaySoundsViewController.swift */; };
 		88D240391C60B5FD0098DC36 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 88D240381C60B5FD0098DC36 /* movie_quote.mp3 */; };
+		88D2403B1C60B7160098DC36 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D2403A1C60B7160098DC36 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		886FD3611C5FD7AE00256F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		886FD36D1C5FDFF400256F25 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaySoundsViewController.swift; path = ../PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		88D240381C60B5FD0098DC36 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
+		88D2403A1C60B7160098DC36 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88D2403B1C60B7160098DC36 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 		886FD3331C5FD7AE00256F25 = {
 			isa = PBXGroup;
 			children = (
+				88D2403A1C60B7160098DC36 /* AVFoundation.framework */,
 				886FD33E1C5FD7AE00256F25 /* PitchPerfect */,
 				886FD3531C5FD7AE00256F25 /* PitchPerfectTests */,
 				886FD35E1C5FD7AE00256F25 /* PitchPerfectUITests */,
