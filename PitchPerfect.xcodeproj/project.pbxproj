@@ -15,6 +15,7 @@
 		886FD3551C5FD7AE00256F25 /* PitchPerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FD3541C5FD7AE00256F25 /* PitchPerfectTests.swift */; };
 		886FD3601C5FD7AE00256F25 /* PitchPerfectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FD35F1C5FD7AE00256F25 /* PitchPerfectUITests.swift */; };
 		886FD36E1C5FDFF400256F25 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FD36D1C5FDFF400256F25 /* PlaySoundsViewController.swift */; };
+		88D240391C60B5FD0098DC36 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 88D240381C60B5FD0098DC36 /* movie_quote.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		886FD35F1C5FD7AE00256F25 /* PitchPerfectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchPerfectUITests.swift; sourceTree = "<group>"; };
 		886FD3611C5FD7AE00256F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		886FD36D1C5FDFF400256F25 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaySoundsViewController.swift; path = ../PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		88D240381C60B5FD0098DC36 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		886FD33E1C5FD7AE00256F25 /* PitchPerfect */ = {
 			isa = PBXGroup;
 			children = (
+				88D240381C60B5FD0098DC36 /* movie_quote.mp3 */,
 				886FD36D1C5FDFF400256F25 /* PlaySoundsViewController.swift */,
 				886FD33F1C5FD7AE00256F25 /* AppDelegate.swift */,
 				886FD3411C5FD7AE00256F25 /* ViewController.swift */,
@@ -234,6 +237,7 @@
 			files = (
 				886FD34A1C5FD7AE00256F25 /* LaunchScreen.storyboard in Resources */,
 				886FD3471C5FD7AE00256F25 /* Assets.xcassets in Resources */,
+				88D240391C60B5FD0098DC36 /* movie_quote.mp3 in Resources */,
 				886FD3451C5FD7AE00256F25 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
