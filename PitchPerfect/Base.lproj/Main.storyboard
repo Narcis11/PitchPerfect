@@ -96,7 +96,6 @@
                                         <animations/>
                                         <state key="normal" title="stopButton" image="stop"/>
                                         <connections>
-                                            <action selector="playChipmunkAudioEffect:" destination="0Ea-2u-tT3" eventType="touchUpInside" id="tAp-Tn-diP"/>
                                             <action selector="stopAudioPlay:" destination="0Ea-2u-tT3" eventType="touchUpInside" id="dhv-r3-2fE"/>
                                         </connections>
                                     </button>
@@ -115,6 +114,9 @@
                                 <rect key="frame" x="20" y="260" width="107" height="100"/>
                                 <animations/>
                                 <state key="normal" title="chipmunkButton" image="chipmunk"/>
+                                <connections>
+                                    <action selector="playChipmunkAudioEffect:" destination="0Ea-2u-tT3" eventType="touchUpInside" id="RHq-Mu-ofZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
