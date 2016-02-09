@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
@@ -87,14 +88,6 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siU-Qy-Kl4">
-                                <rect key="frame" x="6" y="89" width="154" height="100"/>
-                                <animations/>
-                                <state key="normal" title="Button" image="slow"/>
-                                <connections>
-                                    <action selector="playSlowAudio:" destination="0Ea-2u-tT3" eventType="touchUpInside" id="9fx-OP-Gkm"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FvL-vC-7KM">
                                 <rect key="frame" x="128" y="490" width="140" height="50"/>
                                 <subviews>
@@ -109,10 +102,20 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siU-Qy-Kl4">
+                                <rect key="frame" x="20" y="89" width="110" height="100"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="slow"/>
+                                <connections>
+                                    <action selector="playSlowAudio:" destination="0Ea-2u-tT3" eventType="touchUpInside" id="9fx-OP-Gkm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="siU-Qy-Kl4" secondAttribute="leading" id="H48-24-OdZ"/>
+                            <constraint firstItem="siU-Qy-Kl4" firstAttribute="top" secondItem="03E-N8-Xdj" secondAttribute="bottom" constant="25" id="M0a-O0-Bvp"/>
                             <constraint firstItem="E03-9q-KUq" firstAttribute="centerX" secondItem="tee-MB-YCB" secondAttribute="centerX" id="mzR-qd-WQ6"/>
                         </constraints>
                     </view>
