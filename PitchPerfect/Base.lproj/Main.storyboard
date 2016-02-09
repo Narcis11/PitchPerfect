@@ -96,6 +96,7 @@
                                         <animations/>
                                         <state key="normal" title="stopButton" image="stop"/>
                                         <connections>
+                                            <action selector="playChipmunkAudioEffect:" destination="0Ea-2u-tT3" eventType="touchUpInside" id="tAp-Tn-diP"/>
                                             <action selector="stopAudioPlay:" destination="0Ea-2u-tT3" eventType="touchUpInside" id="dhv-r3-2fE"/>
                                         </connections>
                                     </button>
@@ -110,6 +111,11 @@
                                     <action selector="playSlowAudio:" destination="0Ea-2u-tT3" eventType="touchUpInside" id="9fx-OP-Gkm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdr-uf-85b">
+                                <rect key="frame" x="20" y="260" width="107" height="100"/>
+                                <animations/>
+                                <state key="normal" title="chipmunkButton" image="chipmunk"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -120,6 +126,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="chipmunkButton" destination="jdr-uf-85b" id="fdc-Ic-RKj"/>
                         <outlet property="fastButton" destination="iBS-zf-emL" id="HKw-TQ-Xqz"/>
                         <outlet property="slowButton" destination="siU-Qy-Kl4" id="RIW-4z-YhL"/>
                         <outlet property="stopButton" destination="E03-9q-KUq" id="Bzz-PI-ydI"/>
@@ -150,6 +157,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk" width="100" height="100"/>
         <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slow" width="100" height="100"/>

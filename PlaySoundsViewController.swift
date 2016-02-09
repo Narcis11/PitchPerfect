@@ -16,6 +16,8 @@ class PlaySoundsViewController: UIViewController {
     var audioPlayer : AVAudioPlayer!
     var receivedAudio:RecordedAudio!
     @IBOutlet weak var stopButton: UIButton!
+    
+    @IBOutlet weak var chipmunkButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         //receivedAudio = RecordedAudio()
@@ -55,6 +57,10 @@ class PlaySoundsViewController: UIViewController {
         if audioPlayer.playing {
             audioPlayer.stop()
         }
+    }
+    
+    
+    @IBAction func playChipmunkAudioEffect(sender: UIButton) {
     }
     /*
     // MARK: - Navigation
