@@ -35,9 +35,6 @@ class RecordSoundsViewController: UIViewController {
         //record the audio
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
-        let currentDateTime = NSDate()
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "ddMMyyyy-HHmmss"
         let recordingName = "SwiftAudioRecordingUdacity" + ".wav"
         let pathArray = [dirPath, recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
@@ -48,6 +45,7 @@ class RecordSoundsViewController: UIViewController {
         
         try! audioRecorder = AVAudioRecorder(URL: filePath!, settings: [:])
         audioRecorder.meteringEnabled = true
+        audioRecorder.recordFo
         audioRecorder.prepareToRecord()
         audioRecorder.record()
     }
