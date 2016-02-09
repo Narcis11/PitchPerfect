@@ -20,6 +20,7 @@ class PlaySoundsViewController: UIViewController {
     var audioFile:AVAudioFile!
     @IBOutlet weak var stopButton: UIButton!
     
+    @IBOutlet weak var vaderButton: UIButton!
     @IBOutlet weak var chipmunkButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +70,9 @@ class PlaySoundsViewController: UIViewController {
         playAudioWithVariablePitch(1000)
     }
     
+    @IBAction func playVaderAudioEffect(sender: UIButton) {
+        playAudioWithVariablePitch(-1000)
+    }
     func playAudioWithVariablePitch(pitch: Float) {
         audioPlayer.stop()
         audioEngine.stop()

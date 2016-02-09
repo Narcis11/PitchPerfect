@@ -118,6 +118,14 @@
                                     <action selector="playChipmunkAudioEffect:" destination="0Ea-2u-tT3" eventType="touchUpInside" id="RHq-Mu-ofZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siU-oM-QoO">
+                                <rect key="frame" x="204" y="260" width="99" height="100"/>
+                                <animations/>
+                                <state key="normal" title="vaderButton" image="darthvader"/>
+                                <connections>
+                                    <action selector="playVaderAudioEffect:" destination="0Ea-2u-tT3" eventType="touchUpInside" id="49S-vV-ABH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -132,6 +140,7 @@
                         <outlet property="fastButton" destination="iBS-zf-emL" id="HKw-TQ-Xqz"/>
                         <outlet property="slowButton" destination="siU-Qy-Kl4" id="RIW-4z-YhL"/>
                         <outlet property="stopButton" destination="E03-9q-KUq" id="Bzz-PI-ydI"/>
+                        <outlet property="vaderButton" destination="siU-oM-QoO" id="sBt-9J-4WC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2M-TW-ArS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -160,6 +169,7 @@
     </scenes>
     <resources>
         <image name="chipmunk" width="100" height="100"/>
+        <image name="darthvader" width="100" height="100"/>
         <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slow" width="100" height="100"/>
