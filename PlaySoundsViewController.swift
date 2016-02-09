@@ -11,8 +11,10 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
 
+    @IBOutlet weak var fastButton: UIButton!
     @IBOutlet weak var slowButton: UIButton!
     var audioPlayer : AVAudioPlayer!
+    @IBOutlet weak var stopButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         let urlPath:NSURL = NSBundle.mainBundle().URLForResource("movie_quote", withExtension: "mp3")!
@@ -30,10 +32,24 @@ class PlaySoundsViewController: UIViewController {
 
     @IBAction func playSlowAudio(sender: AnyObject) {
         print("in playSlowAudio")
+        audioPlayer.enableRate = true;
+        audioPlayer.rate = 0.6;
         audioPlayer.play()
         
-        
-        
+    }
+    
+    
+    @IBAction func playFastAudio(sender: AnyObject) {
+        audioPlayer.enableRate = true;
+        audioPlayer.rate = 2;
+        audioPlayer.play()
+    }
+    
+    
+    @IBAction func stopAudioPlay(sender: AnyObject) {
+        if audioPlayer.playing {
+            audioPlayer.stop()
+        }
     }
     /*
     // MARK: - Navigation
