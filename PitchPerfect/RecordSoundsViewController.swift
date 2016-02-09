@@ -11,14 +11,14 @@ import AVFoundation
 
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
-
+    
+    //Declared Globally
     @IBOutlet weak var recordingButton: UIButton!
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var stopButton: UIButton!
-    //Declared Globally
     var audioRecorder:AVAudioRecorder!
     var recordedAudio:RecordedAudio!
-    
+    let segueIdentifier = "stopRecording"//the name of the segue that link the two screens
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,9 +52,31 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.record()
     }
     
-    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
-        //TODO: Save the recorded audio
-        //TODO: Move to the next screen (perform a segue)
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully didFinishSuccessfully: Bool) {
+        if (didFinishSuccessfully) {
+            //TODO: Save the recorded audio
+            recordedAudio = RecordedAudio()
+            recordedAudio.filePathUrl = recorder.url
+            print("recorder url: " + String(recorder.url))
+            recordedAudio.title = recorder.url.lastPathComponent
+            //TODO: Move to the next screen (perform a segue)
+            
+        self.performSegueWithIdentifier(segueIdentifier, sender: recordedAudio)
+        }
+        else {
+            print("Recording failed")
+            recordingButton.enabled = true;
+            stopButton.hidden = true;
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == segueIdentifier) {
+            let playSoundsVC:PlaySoundsViewController = segue.destinationViewController as! PlaySoundsViewController
+            
+            let data = sender as! RecordedAudio
+            playSoundsVC.receivedAudio = data
+        }
     }
     
     @IBAction func stopRecording(sender: AnyObject) {

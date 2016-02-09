@@ -14,11 +14,14 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var fastButton: UIButton!
     @IBOutlet weak var slowButton: UIButton!
     var audioPlayer : AVAudioPlayer!
+    var receivedAudio:RecordedAudio!
     @IBOutlet weak var stopButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let urlPath:NSURL = NSBundle.mainBundle().URLForResource("movie_quote", withExtension: "mp3")!
-        do { audioPlayer = try AVAudioPlayer(contentsOfURL: urlPath, fileTypeHint: nil) }
+        //receivedAudio = RecordedAudio()
+        //print("File path url: " + String(receivedAudio.filePathUrl))
+        //let urlPath:NSURL = receivedAudio.da//NSBundle.mainBundle().URLForResource("movie_quote", withExtension: "mp3")!
+        do { audioPlayer = try AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl, fileTypeHint: nil) }
         catch let error as NSError { print(error.description) }
         
         // Do any additional setup after loading the view.
