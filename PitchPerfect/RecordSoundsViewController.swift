@@ -10,13 +10,15 @@ import UIKit
 import AVFoundation
 
 
-class RecordSoundsViewController: UIViewController {
+class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBOutlet weak var recordingButton: UIButton!
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var stopButton: UIButton!
     //Declared Globally
     var audioRecorder:AVAudioRecorder!
+    var recordedAudio:RecordedAudio!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,14 +44,18 @@ class RecordSoundsViewController: UIViewController {
         
         let session = AVAudioSession.sharedInstance()
         try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
-        
+
         try! audioRecorder = AVAudioRecorder(URL: filePath!, settings: [:])
+        audioRecorder.delegate = self;//used to determine when the recording has stopped
         audioRecorder.meteringEnabled = true
-        audioRecorder.recordFo
         audioRecorder.prepareToRecord()
         audioRecorder.record()
     }
     
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
+        //TODO: Save the recorded audio
+        //TODO: Move to the next screen (perform a segue)
+    }
     
     @IBAction func stopRecording(sender: AnyObject) {
         recordingButton.enabled = true;
